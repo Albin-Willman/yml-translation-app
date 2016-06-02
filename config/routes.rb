@@ -8,6 +8,6 @@ Rails.application.routes.draw do
       get 'verify'
       delete 'logout'
     end 
-    get 'languages', to: 'langauges#index'
+    get 'languages', to: 'languages#index'
   end
 end

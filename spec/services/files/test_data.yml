@@ -1,0 +1,4 @@
+test:
+  base:
+    first: 'first'
+    second: 'no third'
