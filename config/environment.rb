@@ -9,5 +9,3 @@ end
 
 # Initialize the Rails application.
 Rails.application.initialize!
-
-heroku config:set SECRET_AUTH_TOKEN="" SECRET_USER="user" 
