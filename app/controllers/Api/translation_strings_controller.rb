@@ -1,6 +1,8 @@
 require 'yaml'
 module Api
   class TranslationStringsController < ApplicationController
+    before_action :authenticate
+
     def index
       render json: TranslationString.all
     end

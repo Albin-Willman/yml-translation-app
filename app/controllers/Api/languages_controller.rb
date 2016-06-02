@@ -1,7 +1,9 @@
 module Api
   class LanguagesController < ApplicationController
-  	def index
-  		render json: Language.all
-  	end
+    before_action :authenticate
+
+    def index
+      render json: Language.all
+    end
   end
 end
