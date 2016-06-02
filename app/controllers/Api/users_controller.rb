@@ -7,7 +7,6 @@ module Api
     def login
       unless params[:user][:email] == ENV['SECRET_USER'] && params[:user][:password] == ENV['SECRET_PASSWORD']
         render json: { }, status: :unauthorized and return
-      }
       end
       render json: {
         data: {
