@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     get 'translations', to: 'translation_strings#index'
     post 'translations', to: 'translation_strings#update'
     post 'translations/uploadYML', to: 'translation_strings#uploadYML'
+    get 'translations/downloadYML', to: 'translation_strings#downloadYML'
+    
     namespace :users do
       post 'login'
       get 'verify'

@@ -16,6 +16,12 @@ module Api
       render json: { data: params }
     end
 
+    def downloadYML
+      render json: { status: :unprocessable_entity } unless params[:language]
+      strings = TranslationString.where(languages: { iso: params[:language] })
+      render json: { yml: YmlProducer.new(strings).yml }
+    end
+
     def uploadYML
       render json: { status: :unprocessable_entity } unless valid_yml(params[:yml])
       language = Language.find_by(iso: params[:language])
