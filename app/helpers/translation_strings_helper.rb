@@ -1,0 +1,2 @@
+module TranslationStringsHelper
+end
